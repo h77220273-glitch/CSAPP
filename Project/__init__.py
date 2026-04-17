@@ -43,7 +43,9 @@ def create_app():
     app.register_blueprint(profilebp)
     app.register_blueprint(Postsbp)
     app.register_blueprint(adminbp)
-    return app
-    
     with app.app_context():
         db.create_all()
+
+    return app
+    
+    
